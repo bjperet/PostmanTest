@@ -13,7 +13,7 @@
           "script": {
             "id": "0056161e-e96a-4958-9062-d8f30ce0f587",
             "exec": [
-              "pm.environment.set(\"variable_key\", \"variable_value\");"
+              "pm.environment.set(\"variable_key\", \"green\");"
             ],
             "type": "text/javascript"
           }
