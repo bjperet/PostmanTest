@@ -1,0 +1,3334 @@
+{
+  "info": {
+    "_postman_id": "0c4969e3-7ee3-439b-a9d4-61723e39caf0",
+    "name": "WebTalk API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "ad-rewards-amount",
+          "_postman_id": "e74ffac7-6ca3-45d0-aac3-41be41908738",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/admin/ad-rewards-amount",
+            "description": "Returns the amount saved in DB for use in computing unit/slice value"
+          },
+          "response": []
+        },
+        {
+          "name": "ad-rewards-amount as user",
+          "_postman_id": "801d45ee-fbf3-44de-855f-dc7439f89e24",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/rewards/amounts?month=2020-11&as_uid=10001318",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "rewards",
+                "amounts"
+              ],
+              "query": [
+                {
+                  "key": "month",
+                  "value": "2020-11"
+                },
+                {
+                  "key": "as_uid",
+                  "value": "10001318"
+                }
+              ]
+            },
+            "description": "Returns the amount saved in DB for use in computing unit/slice value"
+          },
+          "response": []
+        },
+        {
+          "name": "admin-ad-reward-activity",
+          "_postman_id": "54e914b5-f355-4e3f-826f-75bccaa0f13d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/admin/admin-ad-reward-activity",
+            "description": "Returns the amount saved in DB for use in computing unit/slice value"
+          },
+          "response": []
+        },
+        {
+          "name": "blacklist-domains",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "9481ce76-2ed0-4a4a-82ef-9f3f32eddd86",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "97d34e28-9ba1-4cc1-bef9-94f7e2861e2c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/blacklist-domains",
+            "description": "Get blacklisted domains"
+          },
+          "response": []
+        },
+        {
+          "name": "blacklist-domains/delete",
+          "_postman_id": "50be2a9c-5836-4059-b28d-0b3756aacaa9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "domain_name",
+                  "value": "bptestnew.com",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/blacklist-domains/delete",
+            "description": "Delete blacklisted domain"
+          },
+          "response": []
+        },
+        {
+          "name": "blacklist-domains/:domain_name",
+          "_postman_id": "f4bfb16f-2927-4e3d-baf9-f7de17d551c9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/blacklist-domains/:domain_name",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "blacklist-domains",
+                ":domain_name"
+              ],
+              "variable": [
+                {
+                  "id": "0a093795-f2e8-4097-af19-84297a64eded",
+                  "key": "domain_name",
+                  "value": "bptest.com",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Get single blacklisted domain"
+          },
+          "response": []
+        },
+        {
+          "name": "blacklist-domains/save",
+          "_postman_id": "90f69fb1-b5fa-431b-a0ed-3e7cd46928da",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "domain_name",
+                  "value": "bptest1.com",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/blacklist-domains/save",
+            "description": "Save blacklisted domain"
+          },
+          "response": []
+        },
+        {
+          "name": "blacklist-domains/update",
+          "_postman_id": "c21f6769-0be0-4047-af9d-b8a0fbaeeca1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "old_domain_name",
+                  "value": "bptest.com",
+                  "type": "text"
+                },
+                {
+                  "key": "new_domain_name",
+                  "value": "bptestnew.com",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/blacklist-domains/update",
+            "description": "Update blacklisted domain"
+          },
+          "response": []
+        },
+        {
+          "name": "block-country",
+          "_postman_id": "3c4fa163-c03d-4696-a38e-259ecd7bbd50",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "Antarctica",
+                  "type": "text"
+                },
+                {
+                  "key": "code",
+                  "value": "AQ",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/block-country",
+            "description": "Block country"
+          },
+          "response": []
+        },
+        {
+          "name": "blocked-countries",
+          "_postman_id": "05527e26-8bea-4d35-a45f-0056484ebc72",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/admin/blocked-countries",
+            "description": "Returns all blocked countries"
+          },
+          "response": []
+        },
+        {
+          "name": "blocked-usernames",
+          "_postman_id": "3589699f-83c0-4014-adaa-cde260067409",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/admin/blocked-usernames",
+            "description": "Get blocked user names"
+          },
+          "response": []
+        },
+        {
+          "name": "blocked-username/delete",
+          "_postman_id": "55407590-ec3f-47b5-b653-b87006fd8252",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "user_name",
+                  "value": "test32",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/blocked-username/delete",
+            "description": "Delete blocked user name"
+          },
+          "response": []
+        },
+        {
+          "name": "blocked-username/save",
+          "_postman_id": "e70b9cc7-555b-4b06-ae2c-6b02bdfbc981",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "user_name",
+                  "value": "test32",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/blocked-username/save",
+            "description": "Save blocked user name\n"
+          },
+          "response": []
+        },
+        {
+          "name": "bot-suspects",
+          "_postman_id": "9ff5253d-4397-437d-ba70-33ed558dccef",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/rpc/admin/bot-suspects?user_ids=10000003,10005013,10001318",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "rpc",
+                "admin",
+                "bot-suspects"
+              ],
+              "query": [
+                {
+                  "key": "user_ids",
+                  "value": "10000003,10005013,10001318"
+                }
+              ]
+            },
+            "description": "Returns information on suspected bot accounts"
+          },
+          "response": [
+            {
+              "id": "24f13094-8081-45bb-9f24-386966f25c49",
+              "name": "bot-suspects",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{host}}/rpc/admin/bot-suspects"
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "commissions/:user",
+          "_postman_id": "378db5ea-4be0-4194-9fde-92ceb9578679",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/commissions/:user",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "commissions",
+                ":user"
+              ],
+              "variable": [
+                {
+                  "id": "5d2a5428-c2e8-439e-a466-a8fd8c9e1210",
+                  "key": "user",
+                  "value": "10000003",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns monthly totals of commissionss for last 12 months."
+          },
+          "response": []
+        },
+        {
+          "name": "commissions/:user/:yy/:mm",
+          "_postman_id": "45ffadd6-646a-4724-bfca-6aac2182507a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/commissions/:user/:yy/:mm",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "commissions",
+                ":user",
+                ":yy",
+                ":mm"
+              ],
+              "variable": [
+                {
+                  "id": "bf32407a-bb54-4cd8-8185-96c7f91b3115",
+                  "key": "user",
+                  "value": "10000003",
+                  "type": "string"
+                },
+                {
+                  "id": "1b4382dd-4d33-49fe-a930-cb5311c4797b",
+                  "key": "yy",
+                  "value": "20",
+                  "type": "string"
+                },
+                {
+                  "id": "0ae97295-fee1-49af-94b4-01e6d44b970a",
+                  "key": "mm",
+                  "value": "7",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns totals grouped by referral level for provided month"
+          },
+          "response": []
+        },
+        {
+          "name": "commissions/:user/:yy/:mm/full",
+          "_postman_id": "02ff9ebd-e84b-4fc3-8d25-3cdb6acc7469",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/commissions/:user/:yy/:mm/full",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "commissions",
+                ":user",
+                ":yy",
+                ":mm",
+                "full"
+              ],
+              "variable": [
+                {
+                  "key": "user",
+                  "value": "10001318",
+                  "type": "string"
+                },
+                {
+                  "key": "yy",
+                  "value": "2021",
+                  "type": "string"
+                },
+                {
+                  "key": "mm",
+                  "value": "6",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns full transaction details for provided month"
+          },
+          "response": []
+        },
+        {
+          "name": "commissions/:user/:yy1/:mm1/:yy2/:mm2",
+          "_postman_id": "73a29ce0-7ea0-4fc0-9249-482006efbd42",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/commissions/:user/:yy1/:mm1/:yy2/:mm2",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "commissions",
+                ":user",
+                ":yy1",
+                ":mm1",
+                ":yy2",
+                ":mm2"
+              ],
+              "variable": [
+                {
+                  "id": "90f15f12-72b2-47a6-a238-7c664be3b463",
+                  "key": "user",
+                  "value": "10000003",
+                  "type": "string"
+                },
+                {
+                  "id": "7b2cc6c3-209f-4da5-8e05-778dca6a210d",
+                  "key": "yy1",
+                  "value": "20",
+                  "type": "string"
+                },
+                {
+                  "id": "ba121514-e481-4695-8cd6-9c9fdff03d4f",
+                  "key": "mm1",
+                  "value": "3",
+                  "type": "string"
+                },
+                {
+                  "id": "cf97db54-a965-44c9-a471-7e90c7e74a43",
+                  "key": "yy2",
+                  "value": "20",
+                  "type": "string"
+                },
+                {
+                  "id": "d2d664df-9bca-4393-9521-fa6efca78d13",
+                  "key": "mm2",
+                  "value": "7",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns monthly totals of commission for provided month-range"
+          },
+          "response": []
+        },
+        {
+          "name": "contact-connect-count",
+          "_postman_id": "f248d629-dc97-4fc8-b575-6d095ea97890",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/contact-connect-count?id=10005013",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "contact-connect-count"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "10005013"
+                }
+              ]
+            },
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "connected-payout-accounts",
+          "_postman_id": "20ebca8a-cbc0-485c-81a5-8b4d487bbac0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/connected-accounts/:user",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "connected-accounts",
+                ":user"
+              ],
+              "variable": [
+                {
+                  "key": "user",
+                  "value": "10000003",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "contact-connect-count",
+          "_postman_id": "7c384872-1924-4368-87f2-ee0813820344",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "id",
+                  "value": "10005013",
+                  "type": "text"
+                },
+                {
+                  "key": "count",
+                  "value": "10",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/contact-connect-count",
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "customer-alert",
+          "_postman_id": "17cd0c63-626d-444e-bb1e-74f752b265c9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "admin_id",
+                  "value": "10001318",
+                  "type": "text"
+                },
+                {
+                  "key": "type",
+                  "value": "account_disabled",
+                  "type": "text"
+                },
+                {
+                  "key": "message",
+                  "value": "This is a message",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/admin/customer-alert",
+            "description": "adds customer alert. requires webtalk user id of damin creating the alert"
+          },
+          "response": []
+        },
+        {
+          "name": "daily-invitation-click-count",
+          "_postman_id": "1e5dcea4-a3cd-4db5-b8b7-1b0d9ad1095c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/daily-invitation-click-count?since=2020-01-10&until=2021-02-10",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "daily-invitation-click-count"
+              ],
+              "query": [
+                {
+                  "key": "since",
+                  "value": "2020-01-10",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                },
+                {
+                  "key": "until",
+                  "value": "2021-02-10",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                }
+              ]
+            },
+            "description": "Returns list of users who joined in the given date range"
+          },
+          "response": []
+        },
+        {
+          "name": "daily-invitation-count",
+          "_postman_id": "a873f2f5-0b80-4473-bd55-f2266c5511ad",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/daily-invitation-count?since=2020-01-10&until=2020-02-10",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "daily-invitation-count"
+              ],
+              "query": [
+                {
+                  "key": "since",
+                  "value": "2020-01-10",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                },
+                {
+                  "key": "until",
+                  "value": "2020-02-10",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                }
+              ]
+            },
+            "description": "Returns list of users who joined in the given date range"
+          },
+          "response": []
+        },
+        {
+          "name": "daily-registration-count",
+          "_postman_id": "7162f8b8-6637-473c-9cf2-68ac24e27b8e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/daily-registration-count?since=2020-01-01&until=2020-01-15",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "daily-registration-count"
+              ],
+              "query": [
+                {
+                  "key": "since",
+                  "value": "2020-01-01",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                },
+                {
+                  "key": "until",
+                  "value": "2020-01-15",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                }
+              ]
+            },
+            "description": "Returns list of users who joined in the given date range"
+          },
+          "response": []
+        },
+        {
+          "name": "elastic-beanstalk/describe",
+          "_postman_id": "02b328bf-1a62-430e-a5a0-cff27a769dbb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/cloud-control/elastic-beanstalk/describe",
+            "description": "Unblock country"
+          },
+          "response": []
+        },
+        {
+          "name": "elastic-beanstalk/disable",
+          "_postman_id": "d677aa9d-0954-457b-8e79-bfbdc69a5ae4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "application_name",
+                  "type": "text",
+                  "value": "bp_test_app",
+                  "description": "required | string"
+                },
+                {
+                  "key": "environment_name",
+                  "type": "text",
+                  "value": "Bptestapp-env-1",
+                  "description": "required | string"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/cloud-control/elastic-beanstalk/disable",
+            "description": "Unblock country"
+          },
+          "response": []
+        },
+        {
+          "name": "elastic-beanstalk/enable",
+          "_postman_id": "7190b363-ebd2-460c-a4ac-0b358d831835",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "application_name",
+                  "type": "text",
+                  "value": "webtalk-admin",
+                  "description": "required | string"
+                },
+                {
+                  "key": "environment_name",
+                  "type": "text",
+                  "value": "webtalk-admin-staging",
+                  "description": "required | string"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/cloud-control/elastic-beanstalk/enable",
+            "description": "Unblock country"
+          },
+          "response": []
+        },
+        {
+          "name": "elastic-beanstalk/health",
+          "_postman_id": "462a4411-8f26-4554-ad4c-d7ed6c55d657",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/admin/cloud-control/elastic-beanstalk/health?environment_name=webtalk-admin-staging",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "cloud-control",
+                "elastic-beanstalk",
+                "health"
+              ],
+              "query": [
+                {
+                  "key": "environment_name",
+                  "value": "webtalk-admin-staging",
+                  "description": "required | string"
+                }
+              ]
+            },
+            "description": "Unblock country"
+          },
+          "response": []
+        },
+        {
+          "name": "fb/friends",
+          "_postman_id": "626230db-4453-4f1f-9a57-c7830fabfae9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/internal/customer/fb/friends?webtalk_user_id=10006044&limit=0&offset=0",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "internal",
+                "customer",
+                "fb",
+                "friends"
+              ],
+              "query": [
+                {
+                  "key": "webtalk_user_id",
+                  "value": "10006044",
+                  "description": "optional - default to logged in user"
+                },
+                {
+                  "key": "limit",
+                  "value": "0",
+                  "description": "optional - default to 0"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "description": "optional - default to 0"
+                }
+              ]
+            },
+            "description": "Returns a list of Webtalk user id's  who are facebook friends."
+          },
+          "response": []
+        },
+        {
+          "name": "fb/friends-from-fb",
+          "_postman_id": "db8553b5-a295-4e7a-bd72-99394ad8bf41",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "facebook_id",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "facebook_access_token",
+                  "value": "",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/fb/friends-from-fb",
+            "description": "Returns a list of Webtalk user id's  who are facebook friends."
+          },
+          "response": []
+        },
+        {
+          "name": "fb/data-delete/:code",
+          "_postman_id": "05dcb4dd-8080-46eb-9155-beb641766244",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/rpc/fb/data-delete/:code",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "rpc",
+                "fb",
+                "data-delete",
+                ":code"
+              ],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "1234-1234-1234-1234",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns the status for Facebook data delete request"
+          },
+          "response": []
+        },
+        {
+          "name": "fb/datadelete",
+          "_postman_id": "8e826582-0048-44ea-a9e0-9bae9541b2f3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/fb/data-delete",
+            "description": "Webhook called by Facebook API to request data deletion"
+          },
+          "response": []
+        },
+        {
+          "name": "login-lock-clear",
+          "_postman_id": "56ccadcc-b28a-4bef-b0bb-2f8c558ba14b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "login_id",
+                  "value": "bjperet727@gmail.com",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/login-lock-clear",
+            "description": "Clears rate-limit based login locks for the provided login id"
+          },
+          "response": []
+        },
+        {
+          "name": "login-lock-status",
+          "_postman_id": "7a6cf691-dfcf-480a-bc40-69c3fc4c9fde",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/login-lock-status?login_id=bjperet727@gmail.com",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "login-lock-status"
+              ],
+              "query": [
+                {
+                  "key": "login_id",
+                  "value": "bjperet727@gmail.com",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "Returns rate-limit based login locks status for the provided login id"
+          },
+          "response": []
+        },
+        {
+          "name": "post/:post_id",
+          "_postman_id": "d09a826c-5d07-48cd-9bfc-33990152be1d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/post/:post_id",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "post",
+                ":post_id"
+              ],
+              "variable": [
+                {
+                  "id": "8ae3575b-af9e-49e5-864d-c6879b3d663e",
+                  "key": "post_id",
+                  "value": "1",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns user's pro activity data"
+          },
+          "response": []
+        },
+        {
+          "name": "notifications",
+          "_postman_id": "3d92e66b-c2b3-4899-900e-80e076458200",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/notifications?limit=20",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "notifications"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "5",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Returns list of admin notifications"
+          },
+          "response": []
+        },
+        {
+          "name": "notifications/:id",
+          "_postman_id": "764769f8-57c3-477a-917b-2d0285d231c1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/notifications/:id",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "notifications",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "id": "97746588-88b0-4688-b51f-868ae0b20a4f",
+                  "key": "id",
+                  "value": "1",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "news-like",
+          "_postman_id": "ab1c6dec-7526-4577-bca8-a5a9a2045e01",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/news-likes?id=10005013",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "news-likes"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "10005013",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "news-like",
+          "_postman_id": "5f67ace7-d465-44e4-9e5c-e1b076a1d6dd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "id",
+                  "value": "10005013",
+                  "type": "text"
+                },
+                {
+                  "key": "count",
+                  "value": "5",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/news-likes",
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "password-lock-status",
+          "_postman_id": "2c2b3831-8c29-42bf-9e69-acb0a5b59d9a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/password-lock-status?email=looney@tune.com",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "password-lock-status"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "looney@tune.com",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "Returns spammers detected by the system"
+          },
+          "response": []
+        },
+        {
+          "name": "paymentcommissions/:payment_id",
+          "_postman_id": "cc833b3c-e2b1-4220-9999-9e64fa9d114e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/paymentcommissions/:payment_id",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "paymentcommissions",
+                ":payment_id"
+              ],
+              "variable": [
+                {
+                  "id": "9030cbc0-1505-409c-9d53-2af65b3d98ae",
+                  "key": "payment_id",
+                  "value": "1526",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns commissions computed for the payment"
+          },
+          "response": []
+        },
+        {
+          "name": "payoneer-payee-report/load-summary",
+          "_postman_id": "17fc525c-9dc1-4e54-b6fd-3934fd8af018",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/admin/payoneer-payee-report/load-summary",
+            "description": "Returns payoneer payee report summaries"
+          },
+          "response": []
+        },
+        {
+          "name": "payoneer-payee-report/daily-registration-counts",
+          "_postman_id": "7750a731-1a79-4d1b-b069-773c92c9bd4a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/admin/payoneer-payee-report/daily-registration-counts",
+            "description": "Returns payoneer payee report summaries"
+          },
+          "response": []
+        },
+        {
+          "name": "payoneer-payee-report/daily-registration-counts Copy",
+          "_postman_id": "32898026-25b4-4293-861e-387bc595fecb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/payoneer-payee-report/upload-signature?filename=test_file123.csv",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "payoneer-payee-report",
+                "upload-signature"
+              ],
+              "query": [
+                {
+                  "key": "filename",
+                  "value": "test_file123.csv",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "Returns payoneer payee report summaries"
+          },
+          "response": []
+        },
+        {
+          "name": "payoneer-payee-report/upload-report",
+          "_postman_id": "0b35b0ff-2b81-4ca3-a9f4-74359b7872f5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "path",
+                  "value": "payoneer_payee_reports/payeeReport2.csv",
+                  "type": "text"
+                },
+                {
+                  "key": "username",
+                  "value": "apap3",
+                  "type": "text"
+                },
+                {
+                  "key": "bucket",
+                  "value": "wt-dev-admin",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/payoneer-payee-report/upload-report",
+            "description": "Upload payoneer payee report.  Returns summary and conflicts."
+          },
+          "response": []
+        },
+        {
+          "name": "pro/activity/:user",
+          "_postman_id": "f40d6b75-8219-478f-ba2b-384f74fc142a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/pro/activity/:user?limit=5&offset=0",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "pro",
+                "activity",
+                ":user"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "5",
+                  "type": "text"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "type": "text"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "f3a34d32-f456-4325-a680-878f642fa790",
+                  "key": "user",
+                  "value": "10000003",
+                  "description": "Provide user name, email, or numeric id",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns user's pro activity data"
+          },
+          "response": []
+        },
+        {
+          "name": "pro/history/:user",
+          "_postman_id": "416aaa3d-7ed5-4b14-a25d-46a33b568dd9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/pro/history/:user",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "pro",
+                "history",
+                ":user"
+              ],
+              "variable": [
+                {
+                  "id": "810815c3-8a0b-4636-ab6e-0aad1f07bd48",
+                  "key": "user",
+                  "value": "sdssd.dssad",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "returns pro status change history for the user"
+          },
+          "response": []
+        },
+        {
+          "name": "promotions/extend",
+          "_postman_id": "39600c53-d004-49a2-ae04-5b2437aa56e5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "userId",
+                  "value": "10005013",
+                  "type": "text"
+                },
+                {
+                  "key": "promotionId",
+                  "value": "1",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/promotions/extend",
+            "description": "returns pro status change history for the user"
+          },
+          "response": []
+        },
+        {
+          "name": "reported-content",
+          "_postman_id": "d1c712c1-077c-4fb8-8b98-41fb0bb9817f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/reported-content",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "reported-content"
+              ],
+              "query": [
+                {
+                  "key": "reported_user_id",
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "key": "id",
+                  "value": "830cea6c-96ee-42d7-b333-62b077408065",
+                  "disabled": true
+                },
+                {
+                  "key": "status",
+                  "value": "open",
+                  "disabled": true
+                },
+                {
+                  "key": "resolution",
+                  "value": "permissible",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Returns request logs for the provided user, filtered as per parameters"
+          },
+          "response": []
+        },
+        {
+          "name": "reported-content/add",
+          "_postman_id": "2ab9603d-ff1b-407b-9d0c-da0af3469847",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "domain_name",
+                  "value": "bptest.com",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/blacklist-domains/save",
+            "description": "Save blacklisted domain"
+          },
+          "response": []
+        },
+        {
+          "name": "reported-content/add-note",
+          "_postman_id": "85c602ab-f91a-4261-bce7-cfa790f7508e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "content_id",
+                  "value": "038c2ded-cbff-4546-856c-cf8f5887a350",
+                  "type": "text"
+                },
+                {
+                  "key": "admin_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "note",
+                  "value": "this is the note",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/reported-content/add-note",
+            "description": "Save blacklisted domain"
+          },
+          "response": []
+        },
+        {
+          "name": "reported-content/update-resolution",
+          "_postman_id": "47a6671f-71d1-4c87-bfb9-4a24828bddee",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "content_id",
+                  "value": "038c2ded-cbff-4546-856c-cf8f5887a350",
+                  "type": "text"
+                },
+                {
+                  "key": "admin_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "resolution",
+                  "value": "permissible",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/reported-content/update-resolution",
+            "description": "Save blacklisted domain"
+          },
+          "response": []
+        },
+        {
+          "name": "reported-content/update-status",
+          "_postman_id": "04b78c0f-9f53-4c73-bab7-95c040548d8a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "content_id",
+                  "value": "038c2ded-cbff-4546-856c-cf8f5887a350",
+                  "type": "text"
+                },
+                {
+                  "key": "admin_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "status",
+                  "value": "closed",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/reported-content/update-status",
+            "description": "Save blacklisted domain"
+          },
+          "response": []
+        },
+        {
+          "name": "request-logs/:user",
+          "_postman_id": "21e01766-00e6-444c-9d92-88151dfd4e30",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/request-logs/:user",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "request-logs",
+                ":user"
+              ],
+              "query": [
+                {
+                  "key": "path",
+                  "value": "",
+                  "description": "This is compared using LIKE operator, so % wildcard is also allowed. default is nil",
+                  "disabled": true
+                },
+                {
+                  "key": "method",
+                  "value": "",
+                  "description": "default is post",
+                  "disabled": true
+                },
+                {
+                  "key": "since",
+                  "value": "2020-01-01",
+                  "description": "Default is today at 00:00:00.0000",
+                  "disabled": true
+                },
+                {
+                  "key": "until",
+                  "value": "2020-08-14",
+                  "description": "Default is today at 23:59:59.9999",
+                  "disabled": true
+                },
+                {
+                  "key": "with_ex_trace",
+                  "value": "",
+                  "description": "Should return exception stack traces? Default is false",
+                  "disabled": true
+                },
+                {
+                  "key": "response_code",
+                  "value": "",
+                  "description": "200, 404, 500 etc. Default is nil",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "",
+                  "description": "Default is 100",
+                  "disabled": true
+                },
+                {
+                  "key": "offset",
+                  "value": "",
+                  "description": "default is 0",
+                  "disabled": true
+                }
+              ],
+              "variable": [
+                {
+                  "id": "81183632-ffa8-4e14-893a-e97bd71f77ef",
+                  "key": "user",
+                  "value": "10001318",
+                  "description": "Provide user name, email or numeric id",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns request logs for the provided user, filtered as per parameters"
+          },
+          "response": []
+        },
+        {
+          "name": "reset-password-lock",
+          "_postman_id": "a91d8e78-696e-43cf-bc87-613f7575c34c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "looney@tune.com",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/reset-password-lock",
+            "description": "Clears rate-limit based login locks for the provided login id"
+          },
+          "response": []
+        },
+        {
+          "name": "retention-report",
+          "_postman_id": "f0344a6c-a758-4209-a369-873132b1e10d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/retention-report?refresh=true",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "retention-report"
+              ],
+              "query": [
+                {
+                  "key": "refresh",
+                  "value": "true",
+                  "description": "boolean - optional",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "Returns request logs for the provided user, filtered as per parameters"
+          },
+          "response": []
+        },
+        {
+          "name": "rewards/ad-blocker-usage",
+          "_postman_id": "9b159d90-db90-40be-b642-b9ba2ae658ae",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/rewards/ad-blocker-usage?user_id=10001318&since=2021-01-01&until=2021-07-01",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "rewards",
+                "ad-blocker-usage"
+              ],
+              "query": [
+                {
+                  "key": "user_id",
+                  "value": "10001318",
+                  "type": "text"
+                },
+                {
+                  "key": "since",
+                  "value": "2021-01-01",
+                  "type": "text"
+                },
+                {
+                  "key": "until",
+                  "value": "2021-07-01",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "returns pro status change history for the user"
+          },
+          "response": []
+        },
+        {
+          "name": "spammers",
+          "_postman_id": "4f7f4543-8cde-46e3-ac97-c350979d25eb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/spammers?limit=10&offset=0",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "spammers"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10",
+                  "type": "text"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "Returns spammers detected by the system"
+          },
+          "response": []
+        },
+        {
+          "name": "spammers/:user_name",
+          "_postman_id": "4e1011da-85cc-4612-97c8-69cec59062bb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/spammers/:user_name?limit=10&offset=0",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "spammers",
+                ":user_name"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10",
+                  "type": "text"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "type": "text"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "854280bc-b8fd-43bd-a4a2-fc497bfae4a3",
+                  "key": "user_name",
+                  "value": "minh.mxstudios.1",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns spam content posted by the user"
+          },
+          "response": []
+        },
+        {
+          "name": "unblock-country",
+          "_postman_id": "35775fd3-9f47-4134-adbd-29a7377102b8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "type": "text",
+                  "value": "Antarctica"
+                },
+                {
+                  "key": "code",
+                  "type": "text",
+                  "value": "AQ"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/admin/unblock-country",
+            "description": "Unblock country"
+          },
+          "response": []
+        },
+        {
+          "name": "userinfo/:user",
+          "_postman_id": "86d2d395-6daf-4793-913f-f526248e2c07",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/userinfo/:user",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "userinfo",
+                ":user"
+              ],
+              "variable": [
+                {
+                  "key": "user",
+                  "value": "10001318",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns user's info"
+          },
+          "response": []
+        },
+        {
+          "name": "userpayments/:user",
+          "_postman_id": "7e232bfd-ded5-40f0-9a40-4dbcec9d9f8d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/userpayments/:user",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "userpayments",
+                ":user"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "type": "text",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "offset",
+                  "type": "text",
+                  "value": "0",
+                  "disabled": true
+                }
+              ],
+              "variable": [
+                {
+                  "id": "737788a9-b7bf-4799-8532-c80d0f151a1e",
+                  "key": "user",
+                  "value": "10000003",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns payments made by user (default last 20)"
+          },
+          "response": []
+        },
+        {
+          "name": "user-activity-count",
+          "_postman_id": "45e5246f-09d7-4a2a-9e34-f2ff816a66ec",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/user-activity-count?since=2020-01-10&until=2021-02-10",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "user-activity-count"
+              ],
+              "query": [
+                {
+                  "key": "since",
+                  "value": "2020-01-10",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                },
+                {
+                  "key": "until",
+                  "value": "2021-02-10",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                }
+              ]
+            },
+            "description": "Returns list of users who joined in the given date range"
+          },
+          "response": []
+        },
+        {
+          "name": "user-downline/:referrer",
+          "_postman_id": "c10848fe-302c-485f-bb11-cab1c3d732a7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/user-downline/:referrer",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "user-downline",
+                ":referrer"
+              ],
+              "variable": [
+                {
+                  "id": "906b7cca-ae41-4f20-a713-13f18025dd42",
+                  "key": "referrer",
+                  "value": "10000003",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns all users referrered by 'referrer' id"
+          },
+          "response": []
+        },
+        {
+          "name": "user-list",
+          "_postman_id": "86eb9aa3-789d-468b-8c49-36a8f6432983",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/user-list?since=2020-01-10&until=2021-02-10",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "user-list"
+              ],
+              "query": [
+                {
+                  "key": "since",
+                  "value": "2020-01-10",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                },
+                {
+                  "key": "until",
+                  "value": "2021-02-10",
+                  "description": "Date in yyyy-mm-dd format. Default is today"
+                },
+                {
+                  "key": "referrer",
+                  "value": "10000509",
+                  "description": "Provide referrer name, email, or numeric id",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Returns list of users who joined in the given date range"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "25fd4cf2-bd8e-41f4-bf7d-1723496ad4da"
+    },
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Full Status",
+          "_postman_id": "075cb53f-4995-4186-94ab-85996be6f2fb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/health/fullstatus"
+          },
+          "response": []
+        },
+        {
+          "name": "Status",
+          "_postman_id": "557612a9-ce92-461b-ba6d-0abbc591aa1a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/health/status"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "b3266816-637e-4330-a8a0-47c8a8a85704"
+    },
+    {
+      "name": "SSO",
+      "item": [
+        {
+          "name": "CheckLogin",
+          "_postman_id": "5a4036cb-970a-49ad-9b21-9c502c8016b6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/check-login"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Token",
+          "_postman_id": "b702a3bd-763e-4ac3-955c-d1dc6cecafe0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "password",
+                  "value": "Test123!",
+                  "description": "required - string ",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/generate-access-token"
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "_postman_id": "63071668-ec6b-4eb8-b472-6b540a3d136e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "login_id",
+                  "value": "andrew@webtalk.co",
+                  "type": "text"
+                },
+                {
+                  "key": "login_password",
+                  "value": "Test123!",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/sso/login"
+          },
+          "response": []
+        },
+        {
+          "name": "Logout User",
+          "_postman_id": "71107108-bb09-494a-975c-441708ee112c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/sso/logout"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "7d5ed601-4fb1-4778-8e0a-c4ec24053405"
+    },
+    {
+      "name": "Platform",
+      "item": [
+        {
+          "name": "email",
+          "_postman_id": "54c67347-e9ef-455a-89f2-02d14a7c94eb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "type",
+                  "value": "daily_user_registration",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/platform/email"
+          },
+          "response": []
+        },
+        {
+          "name": "Daily Registration Report",
+          "_postman_id": "b10dccb0-64ba-4866-8510-5b712c0b5201",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "type",
+                  "value": "daily_user_registration",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/platform/notification"
+          },
+          "response": []
+        },
+        {
+          "name": "sms",
+          "_postman_id": "53a9c5fc-e4dc-4660-94f6-52f2ea8c3c2e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/sms"
+          },
+          "response": []
+        },
+        {
+          "name": "sms",
+          "_postman_id": "fd732b09-fbf3-4a42-bc76-e6ebee62621d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "type",
+                  "value": "native_mobile_application_link",
+                  "type": "text"
+                },
+                {
+                  "key": "phone_number",
+                  "value": "17278512815",
+                  "type": "text"
+                },
+                {
+                  "key": "data",
+                  "value": "{\"platform\" : \"android\", \"link\" : \"https://www.webtalk.co\"}",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/sms/"
+          },
+          "response": []
+        },
+        {
+          "name": "sms/phone-count",
+          "_postman_id": "24a480fd-197b-40e1-b72a-af7ed4d4a208",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "{{host}}/rpc/sms/phone-count?phone=17278512816&type=native_mobile_application_link",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "rpc",
+                "sms",
+                "phone-count"
+              ],
+              "query": [
+                {
+                  "key": "phone",
+                  "value": "17278512816"
+                },
+                {
+                  "key": "type",
+                  "value": "native_mobile_application_link"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "sms/phone-count",
+          "_postman_id": "ecee4242-bc28-450f-90a6-e76b29ca6fd1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "type",
+                  "value": "native_mobile_application_link",
+                  "type": "text"
+                },
+                {
+                  "key": "phone",
+                  "value": "17278512816",
+                  "type": "text"
+                },
+                {
+                  "key": "count",
+                  "value": "0",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/admin/sms/phone-count"
+          },
+          "response": []
+        },
+        {
+          "name": "sms/ip-count",
+          "_postman_id": "9bc19ef8-745b-492e-b754-07064f8f6ad1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "{{host}}/rpc/sms/ip-count?ip=111.22.3.444&type=native_mobile_application_link",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "rpc",
+                "sms",
+                "ip-count"
+              ],
+              "query": [
+                {
+                  "key": "ip",
+                  "value": "111.22.3.444"
+                },
+                {
+                  "key": "type",
+                  "value": "native_mobile_application_link"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "sms/ip-count",
+          "_postman_id": "46063597-7a4f-43c3-b6ec-fcb31172a4c5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "type",
+                  "value": "native_mobile_application_link",
+                  "type": "text"
+                },
+                {
+                  "key": "ip",
+                  "value": "111.22.3.444",
+                  "type": "text"
+                },
+                {
+                  "key": "count",
+                  "value": "0",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/sms/ip-count"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "f8368c69-397c-4a4a-8b0a-1a550d23af17"
+    },
+    {
+      "name": "tax",
+      "item": [
+        {
+          "name": "generate W9",
+          "_postman_id": "b683e053-57db-474e-9b6a-c972d2c16c20",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/tax/w9-pdf?access_token=33d52698-2521-43f8-b722-571c27a1b087&year=2020",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "w9-pdf"
+              ],
+              "query": [
+                {
+                  "key": "access_token",
+                  "value": "33d52698-2521-43f8-b722-571c27a1b087",
+                  "description": "required: generate via api/generate-access-token"
+                },
+                {
+                  "key": "year",
+                  "value": "2020",
+                  "description": "optional - yyyy - default to current year",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Efile Report LIst",
+          "_postman_id": "8de79aae-e33a-4048-8f97-d09aa8c0f537",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/tax/efile-reports"
+          },
+          "response": []
+        },
+        {
+          "name": "1099 earners",
+          "_postman_id": "471812c8-ac65-44ef-b627-fdbe06b6a7e5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/tax/1099-earners?min=600&year=2020",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "1099-earners"
+              ],
+              "query": [
+                {
+                  "key": "min",
+                  "value": "600"
+                },
+                {
+                  "key": "year",
+                  "value": "2020"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "info",
+          "_postman_id": "72d07b64-e914-4504-b461-f83cfbb2afc1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/tax/info"
+          },
+          "response": []
+        },
+        {
+          "name": "usa-tax-filer",
+          "_postman_id": "5ffaeb0e-2c1a-41af-85e0-745351800323",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "status",
+                  "value": "false",
+                  "description": "required.- boolean ",
+                  "type": "text"
+                },
+                {
+                  "key": "year",
+                  "value": "1981",
+                  "description": "optional - yyyy - defaults to current year",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/tax/usa-tax-filer",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "usa-tax-filer"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "w9",
+          "_postman_id": "8f6c49fd-af20-4f48-b1aa-6708b982cf74",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "year",
+                  "value": "2020",
+                  "description": "optional - yyyy - default to current year",
+                  "type": "text"
+                },
+                {
+                  "key": "USATaxFiler",
+                  "value": "true",
+                  "description": "optional- boolean - default true",
+                  "type": "text"
+                },
+                {
+                  "key": "entityType",
+                  "value": "llc",
+                  "description": "optional - 'individual' | 'cCorporation' | 'sCorporation' | 'partnership' | 'trustEstate' | 'llc' | 'other'",
+                  "type": "text"
+                },
+                {
+                  "key": "firstName",
+                  "value": "Alpha",
+                  "description": "optional - string",
+                  "type": "text"
+                },
+                {
+                  "key": "lastName",
+                  "value": "Beta",
+                  "description": "optional - string",
+                  "type": "text"
+                },
+                {
+                  "key": "middleName",
+                  "value": "Go",
+                  "description": "optional - string",
+                  "type": "text"
+                },
+                {
+                  "key": "businessName",
+                  "value": "Drawzzz",
+                  "description": "optional - string",
+                  "type": "text"
+                },
+                {
+                  "key": "llcType",
+                  "value": "",
+                  "description": "required if entityType == 'llc' - 'S' | 'L' | 'C'",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "businessTypeOtherClassification",
+                  "value": "",
+                  "description": "required if entityType == 'other' - string",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "exemptPayeeCode",
+                  "value": "",
+                  "description": "optional - string",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "exemptFatcaReportingCode",
+                  "value": "",
+                  "description": "optional - string",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "address1",
+                  "value": "61111 N Greene Baye Rd",
+                  "description": "optional - string",
+                  "type": "text"
+                },
+                {
+                  "key": "address2",
+                  "value": "STE 217",
+                  "description": "optional - string",
+                  "type": "text"
+                },
+                {
+                  "key": "city",
+                  "value": "Milwaukee",
+                  "description": "optional - string ",
+                  "type": "text"
+                },
+                {
+                  "key": "state",
+                  "value": "WI",
+                  "description": "optional - string (must be valid postal code i.e. FL in all caps)",
+                  "type": "text"
+                },
+                {
+                  "key": "zipCode",
+                  "value": "53209",
+                  "description": "optional - number",
+                  "type": "text"
+                },
+                {
+                  "key": "accountNumbers",
+                  "value": "",
+                  "description": "optional - string",
+                  "type": "text"
+                },
+                {
+                  "key": "ssn",
+                  "value": "987456321",
+                  "description": "optional - number - can't also have ein",
+                  "type": "text"
+                },
+                {
+                  "key": "ein",
+                  "value": "",
+                  "description": "optional - number - can't also have ssn",
+                  "type": "text"
+                },
+                {
+                  "key": "signature",
+                  "value": "John Doe",
+                  "description": "optional-string",
+                  "type": "text"
+                },
+                {
+                  "key": "signatureDate",
+                  "value": "2020-01-01",
+                  "type": "text",
+                  "description": "optional - yyyy-mm-dd"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/tax/w9"
+          },
+          "response": []
+        },
+        {
+          "name": "w9-pdf",
+          "_postman_id": "904c7495-1897-40c5-acb2-4fb7557f91e4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/tax/w9-pdf?access_token=33d52698-2521-43f8-b722-571c27a1b087&year=2020",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "w9-pdf"
+              ],
+              "query": [
+                {
+                  "key": "access_token",
+                  "value": "33d52698-2521-43f8-b722-571c27a1b087",
+                  "description": "required: generate via api/generate-access-token"
+                },
+                {
+                  "key": "year",
+                  "value": "2020",
+                  "description": "optional - yyyy - default to current year",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "1099-pdf",
+          "_postman_id": "d8241eaa-70ab-4465-a925-8b1d76f4fabf",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/tax/1099?access_token=33d52698-2521-43f8-b722-571c27a1b087&year=2020",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "tax",
+                "1099"
+              ],
+              "query": [
+                {
+                  "key": "access_token",
+                  "value": "33d52698-2521-43f8-b722-571c27a1b087",
+                  "description": "required: generate via api/generate-access-token"
+                },
+                {
+                  "key": "year",
+                  "value": "2020",
+                  "description": "optional - yyyy - default to current year"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "generate 1099-pdf",
+          "_postman_id": "da774e42-dad9-4e23-979d-43ab251ee895",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "min",
+                  "value": "600",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "year",
+                  "value": "2020",
+                  "type": "text"
+                },
+                {
+                  "key": "test",
+                  "value": "true",
+                  "type": "default",
+                  "disabled": true
+                },
+                {
+                  "key": "user_id",
+                  "value": "10001318",
+                  "type": "default"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/admin/1099"
+          },
+          "response": []
+        },
+        {
+          "name": "1099 years",
+          "_postman_id": "5150b1d9-a5f4-440a-b32b-c60a1253fe76",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/tax/1099s"
+          },
+          "response": []
+        },
+        {
+          "name": "tax docs",
+          "_postman_id": "868ee83b-f857-4e5c-b0b5-06bbe38019ee",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/api/tax/1099s"
+          },
+          "response": []
+        },
+        {
+          "name": "generate bulk 1099 efile",
+          "_postman_id": "4d28ddba-5bda-47ce-968b-22175eff9aed",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "min",
+                  "value": "600",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "year",
+                  "value": "2021",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/rpc/admin/generate-bulk-1099"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "3428ca51-3217-4fe2-a0b0-aac0e6250c91"
+    },
+    {
+      "name": "Customer",
+      "item": [
+        {
+          "name": "customer-status",
+          "_postman_id": "85bbb0a6-40ed-4c9c-b8fe-04f26b102f78",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/internal/customer/customer-status?customer_ids=10001318,10000003",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "internal",
+                "customer",
+                "customer-status"
+              ],
+              "query": [
+                {
+                  "key": "customer_ids",
+                  "value": "10001318,10000003",
+                  "description": "required - comma-separated numbers"
+                },
+                {
+                  "key": "year",
+                  "value": "2025",
+                  "description": "optional - yyyy - defaults to current year",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "a9d54eaf-c389-479a-97c7-80636c214045"
+    },
+    {
+      "name": "Mock",
+      "item": [
+        {
+          "name": "Create User",
+          "_postman_id": "03577f16-660c-4442-ae20-f4276f02408c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user_id\": \"Jacob\",\n    \"nickname\": \"Asty\",\n    \"profile_url\": \"https://sendbird.com/main/img/profiles/profile_05_512px.png\",\n    \"issue_access_token\": true,\n    \"issue_session_token\": true,\n    \"session_token_expires_at\": 1542945056625,\n    \"discovery_keys\": [\"123-456-7890\", \"654-321-0987\"],\n    \"metadata\": {\n        \"location\": \"Seoul\",\n        \"marriage\": \"N\",\n        \"hasSomeone\": \"Y\"\n    }\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "{{host}}/api/admin/mock/create-user"
+          },
+          "response": []
+        },
+        {
+          "name": "Open Channel",
+          "_postman_id": "aebe0b10-d1ac-4110-8a75-c71369c74844",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Live streaming show on channel 5!\",\n    \"channel_url\": \"monday_channel_5_at_10_pm\",\n    \"cover_url\": \"https://sendbird.com/main/img/cover/cover_02.jpg\",\n    \"data\": \"{event_trigger:100,500,1000,2000}\",\n    \"operator_ids\": [\"Alek\", \"Leslie\"],\n    \"custom_type\": \"Live\"\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "{{host}}/api/admin/mock/open-channel"
+          },
+          "response": []
+        },
+        {
+          "name": "Migrate Users",
+          "_postman_id": "3f6c53ff-680b-424a-86f2-af1b48817a99",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{host}}/api/admin/mock/migrate-users"
+          },
+          "response": []
+        },
+        {
+          "name": "Health",
+          "_postman_id": "278e40c7-3213-444d-809d-385667e930bd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/admin/mock/health"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "2e4a4be3-03bc-49d9-ae74-ace48d9cba2c"
+    },
+    {
+      "name": "Internal",
+      "item": [
+        {
+          "name": "Pending Registration",
+          "_postman_id": "593ee513-efc1-4526-9408-1f6bdfec4a8a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "pending_signup_id",
+                  "value": "5658",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/internal/registration/pending"
+          },
+          "response": []
+        },
+        {
+          "name": "Complete Registration",
+          "_postman_id": "b5e5bfde-74da-4a02-8612-50729e686981",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "pending_signup_id",
+                  "value": "5647",
+                  "type": "text"
+                },
+                {
+                  "key": "webtalk_user_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": "{{host}}/internal/registration/complete"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "a7eee601-2664-4047-833c-3179d388c1e7"
+    }
+  ]
+}
