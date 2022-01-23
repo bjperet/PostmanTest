@@ -324,7 +324,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{host}}/rpc/admin/bot-suspects?user_ids=10000003,10005013,10001318",
+              "raw": "{{host}}/rpc/admin/bot-suspects?user_ids=10001318",
               "host": [
                 "{{host}}"
               ],
@@ -336,7 +336,7 @@
               "query": [
                 {
                   "key": "user_ids",
-                  "value": "10000003,10005013,10001318"
+                  "value": "10001318"
                 }
               ]
             },
