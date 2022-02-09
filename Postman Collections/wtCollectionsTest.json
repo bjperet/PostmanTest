@@ -636,7 +636,7 @@
               "mode": "urlencoded",
               "urlencoded": [
                 {
-                  "key": "admin_id",
+                  "key": "customer_id",
                   "value": "10001318",
                   "type": "text"
                 },
