@@ -2555,7 +2555,7 @@
                 }
               ]
             },
-            "url": "{{host}}/rpc/sms/ip-count"
+            "url": "{{host}}/rpc/admin/sms/ip-count-reset"
           },
           "response": []
         }
