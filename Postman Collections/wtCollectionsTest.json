@@ -2525,6 +2525,39 @@
             "url": "{{host}}/rpc/sms/ip-count"
           },
           "response": []
+        },
+        {
+          "name": "sms/ip-count Copy",
+          "id": "e152e389-06e7-4acc-b552-bfacb32a503b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "type",
+                  "value": "native_mobile_application_link",
+                  "type": "text"
+                },
+                {
+                  "key": "ip",
+                  "value": "111.22.3.444",
+                  "type": "text"
+                },
+                {
+                  "key": "count",
+                  "value": "0",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{host}}/rpc/sms/ip-count"
+          },
+          "response": []
         }
       ],
       "id": "f8368c69-397c-4a4a-8b0a-1a550d23af17"
