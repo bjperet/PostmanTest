@@ -2424,6 +2424,39 @@
           "response": []
         },
         {
+          "name": "sms/phone-count Copy",
+          "id": "65ed20ab-1660-4367-a552-7763b9a0084a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "type",
+                  "value": "native_mobile_application_link",
+                  "type": "text"
+                },
+                {
+                  "key": "phone",
+                  "value": "17278512816",
+                  "type": "text"
+                },
+                {
+                  "key": "count",
+                  "value": "0",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{host}}/rpc/admin/sms/phone-count"
+          },
+          "response": []
+        },
+        {
           "name": "sms/ip-count",
           "id": "9bc19ef8-745b-492e-b754-07064f8f6ad1",
           "protocolProfileBehavior": {
@@ -2490,39 +2523,6 @@
               ]
             },
             "url": "{{host}}/rpc/sms/ip-count"
-          },
-          "response": []
-        },
-        {
-          "name": "sms/phone-count Copy",
-          "id": "65ed20ab-1660-4367-a552-7763b9a0084a",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "type",
-                  "value": "native_mobile_application_link",
-                  "type": "text"
-                },
-                {
-                  "key": "phone",
-                  "value": "17278512816",
-                  "type": "text"
-                },
-                {
-                  "key": "count",
-                  "value": "0",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "{{host}}/rpc/admin/sms/phone-count"
           },
           "response": []
         }
