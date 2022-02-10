@@ -2367,11 +2367,12 @@
               "urlencoded": []
             },
             "url": {
-              "raw": "{{host}}/admin/sms/phone-count?phone=17278512816&type=native_mobile_application_link",
+              "raw": "{{host}}/rpc/admin/sms/phone-count?phone=17278512816&type=native_mobile_application_link",
               "host": [
                 "{{host}}"
               ],
               "path": [
+                "rpc",
                 "admin",
                 "sms",
                 "phone-count"
@@ -2414,7 +2415,7 @@
                 },
                 {
                   "key": "count",
-                  "value": "0",
+                  "value": "2",
                   "type": "text"
                 }
               ]
