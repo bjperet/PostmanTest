@@ -2528,7 +2528,7 @@
           "response": []
         },
         {
-          "name": "sms/ip-count Copy",
+          "name": "sms/ip-count-reset",
           "id": "e152e389-06e7-4acc-b552-bfacb32a503b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
