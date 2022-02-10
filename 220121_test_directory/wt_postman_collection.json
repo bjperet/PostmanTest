@@ -2452,7 +2452,7 @@
                 }
               ]
             },
-            "url": "{{host}}/rpc/admin/sms/phone-count"
+            "url": "{{host}}/rpc/admin/sms/phone-count-reset"
           },
           "response": []
         },
