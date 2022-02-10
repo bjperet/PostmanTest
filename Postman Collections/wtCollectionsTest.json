@@ -2470,12 +2470,13 @@
               "urlencoded": []
             },
             "url": {
-              "raw": "{{host}}/rpc/sms/ip-count?ip=111.22.3.444&type=native_mobile_application_link",
+              "raw": "{{host}}/rpc/admin/sms/ip-count?ip=111.22.3.444&type=native_mobile_application_link",
               "host": [
                 "{{host}}"
               ],
               "path": [
                 "rpc",
+                "admin",
                 "sms",
                 "ip-count"
               ],
