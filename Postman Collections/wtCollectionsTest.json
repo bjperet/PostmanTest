@@ -2424,7 +2424,7 @@
           "response": []
         },
         {
-          "name": "sms/phone-count Copy",
+          "name": "sms/phone-count-reset",
           "id": "65ed20ab-1660-4367-a552-7763b9a0084a",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
