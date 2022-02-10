@@ -2517,12 +2517,12 @@
                 },
                 {
                   "key": "count",
-                  "value": "0",
+                  "value": "2",
                   "type": "text"
                 }
               ]
             },
-            "url": "{{host}}/rpc/sms/ip-count"
+            "url": "{{host}}/rpc/admin/sms/ip-count"
           },
           "response": []
         },
