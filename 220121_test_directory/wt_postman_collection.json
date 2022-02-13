@@ -2544,11 +2544,6 @@
                   "key": "ip",
                   "value": "111.22.3.444",
                   "type": "text"
-                },
-                {
-                  "key": "count",
-                  "value": "0",
-                  "type": "text"
                 }
               ]
             },
