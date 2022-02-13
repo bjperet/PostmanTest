@@ -2367,7 +2367,7 @@
               "urlencoded": []
             },
             "url": {
-              "raw": "{{host}}/rpc/admin/sms/phone-count?phone=17278512816&type=native_mobile_application_link",
+              "raw": "{{host}}/rpc/admin/sms/phone-count?phone=17278512815&type=native_mobile_application_link",
               "host": [
                 "{{host}}"
               ],
@@ -2380,7 +2380,7 @@
               "query": [
                 {
                   "key": "phone",
-                  "value": "17278512816"
+                  "value": "17278512815"
                 },
                 {
                   "key": "type",
@@ -2410,7 +2410,7 @@
                 },
                 {
                   "key": "phone",
-                  "value": "1727851281",
+                  "value": "1727851285",
                   "type": "text"
                 },
                 {
