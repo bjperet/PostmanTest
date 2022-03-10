@@ -10,6 +10,18 @@
       "item": [
         {
           "name": "ad-rewards-amount",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "69770289-e550-4987-9008-5d4485476325",
+                "exec": [
+                  "console.log(\"test\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "e74ffac7-6ca3-45d0-aac3-41be41908738",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1277,6 +1289,20 @@
               ]
             },
             "description": "Returns commissions computed for the payment"
+          },
+          "response": []
+        },
+        {
+          "name": "payoneer-payee-report/load-summary",
+          "id": "17fc525c-9dc1-4e54-b6fd-3934fd8af018",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{host}}/api/admin/payoneer-payee-report/load-summary",
+            "description": "Returns payoneer payee report summaries"
           },
           "response": []
         },
@@ -3046,6 +3072,48 @@
         }
       ],
       "id": "3428ca51-3217-4fe2-a0b0-aac0e6250c91"
+    },
+    {
+      "name": "Customer",
+      "item": [
+        {
+          "name": "customer-status",
+          "id": "85bbb0a6-40ed-4c9c-b8fe-04f26b102f78",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/internal/customer/customer-status?customer_ids=10001318,10000003",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "internal",
+                "customer",
+                "customer-status"
+              ],
+              "query": [
+                {
+                  "key": "customer_ids",
+                  "value": "10001318,10000003",
+                  "description": "required - comma-separated numbers"
+                },
+                {
+                  "key": "year",
+                  "value": "2025",
+                  "description": "optional - yyyy - defaults to current year",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "a9d54eaf-c389-479a-97c7-80636c214045"
     },
     {
       "name": "Mock",
