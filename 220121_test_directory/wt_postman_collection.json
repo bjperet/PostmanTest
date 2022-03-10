@@ -16,7 +16,7 @@
               "script": {
                 "id": "69770289-e550-4987-9008-5d4485476325",
                 "exec": [
-                  "console.log(\"test\");"
+                  ""
                 ],
                 "type": "text/javascript"
               }
