@@ -10,6 +10,18 @@
       "item": [
         {
           "name": "ad-rewards-amount",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "69770289-e550-4987-9008-5d4485476325",
+                "exec": [
+                  "console.log(\"test\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "e74ffac7-6ca3-45d0-aac3-41be41908738",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -2367,7 +2379,7 @@
               "urlencoded": []
             },
             "url": {
-              "raw": "{{host}}/rpc/admin/sms/phone-count?phone=17278512816&type=native_mobile_application_link",
+              "raw": "{{host}}/rpc/admin/sms/phone-count?phone=17278512815&type=native_mobile_application_link",
               "host": [
                 "{{host}}"
               ],
@@ -2380,7 +2392,7 @@
               "query": [
                 {
                   "key": "phone",
-                  "value": "17278512816"
+                  "value": "17278512815"
                 },
                 {
                   "key": "type",
@@ -2410,7 +2422,7 @@
                 },
                 {
                   "key": "phone",
-                  "value": "17278512816",
+                  "value": "1727851285",
                   "type": "text"
                 },
                 {
@@ -2543,11 +2555,6 @@
                 {
                   "key": "ip",
                   "value": "111.22.3.444",
-                  "type": "text"
-                },
-                {
-                  "key": "count",
-                  "value": "0",
                   "type": "text"
                 }
               ]
