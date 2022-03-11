@@ -723,7 +723,7 @@
                 }
               ]
             },
-            "url": "{{host}}/api/admin/comment-like-count",
+            "url": "{{host}}/rpc/admin/comment-like-count",
             "description": "Returns specific notification id"
           },
           "response": []
