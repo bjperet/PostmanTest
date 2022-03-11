@@ -546,36 +546,6 @@
           "response": []
         },
         {
-          "name": "contact-connect-count",
-          "id": "f248d629-dc97-4fc8-b575-6d095ea97890",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{host}}/api/admin/contact-connect-count?id=10005013",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api",
-                "admin",
-                "contact-connect-count"
-              ],
-              "query": [
-                {
-                  "key": "id",
-                  "value": "10005013"
-                }
-              ]
-            },
-            "description": "Returns specific notification id"
-          },
-          "response": []
-        },
-        {
           "name": "connected-payout-accounts",
           "id": "20ebca8a-cbc0-485c-81a5-8b4d487bbac0",
           "protocolProfileBehavior": {
@@ -599,6 +569,36 @@
                 {
                   "key": "user",
                   "value": "10000003"
+                }
+              ]
+            },
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "contact-connect-count",
+          "id": "f248d629-dc97-4fc8-b575-6d095ea97890",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/contact-connect-count?id=10005013",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "contact-connect-count"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "10005013"
                 }
               ]
             },
@@ -666,6 +666,65 @@
             },
             "url": "{{host}}/rpc/admin/customer-alert",
             "description": "adds customer alert. requires webtalk user id of damin creating the alert"
+          },
+          "response": []
+        },
+        {
+          "name": "contact-connect-count Copy",
+          "id": "941705c6-698b-4ef9-b4a1-f7a4f022569a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "id",
+                  "value": "10005013",
+                  "type": "text"
+                },
+                {
+                  "key": "count",
+                  "value": "10",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{host}}/api/admin/contact-connect-count",
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "contact-connect-count Copy",
+          "id": "9504d059-1058-4fb4-b30e-95c4f670e9fc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/admin/comment-like-count?id=10005013",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "comment-like-count"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "10005013"
+                }
+              ]
+            },
+            "description": "Returns specific notification id"
           },
           "response": []
         },
