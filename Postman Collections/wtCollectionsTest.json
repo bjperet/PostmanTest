@@ -671,35 +671,6 @@
         },
         {
           "name": "comment-like-count",
-          "id": "941705c6-698b-4ef9-b4a1-f7a4f022569a",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "id",
-                  "value": "10005013",
-                  "type": "text"
-                },
-                {
-                  "key": "count",
-                  "value": "10",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "{{host}}/api/admin/contact-connect-count",
-            "description": "Returns specific notification id"
-          },
-          "response": []
-        },
-        {
-          "name": "comment-like-count",
           "id": "9504d059-1058-4fb4-b30e-95c4f670e9fc",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -724,6 +695,35 @@
                 }
               ]
             },
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "comment-like-count",
+          "id": "941705c6-698b-4ef9-b4a1-f7a4f022569a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "id",
+                  "value": "10005013",
+                  "type": "text"
+                },
+                {
+                  "key": "count",
+                  "value": "10",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{host}}/api/admin/comment-like-count",
             "description": "Returns specific notification id"
           },
           "response": []
