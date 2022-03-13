@@ -729,6 +729,65 @@
           "response": []
         },
         {
+          "name": "comment-like-count Copy",
+          "id": "b7fa5d9c-0669-408a-86c1-748d9a7af40d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/rpc/admin/comment-like-count?id=10005013",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "rpc",
+                "admin",
+                "comment-like-count"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "10005013"
+                }
+              ]
+            },
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
+          "name": "comment-like-count Copy",
+          "id": "8943b7d8-1636-4134-a7fe-3a29168b014d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "id",
+                  "value": "10005013",
+                  "type": "text"
+                },
+                {
+                  "key": "count",
+                  "value": "10",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{host}}/rpc/admin/comment-like-count",
+            "description": "Returns specific notification id"
+          },
+          "response": []
+        },
+        {
           "name": "daily-invitation-click-count",
           "id": "1e5dcea4-a3cd-4db5-b8b7-1b0d9ad1095c",
           "protocolProfileBehavior": {
@@ -2585,7 +2644,7 @@
                 },
                 {
                   "key": "count",
-                  "value": "2",
+                  "value": "4",
                   "type": "text"
                 }
               ]
