@@ -718,7 +718,7 @@
                 },
                 {
                   "key": "count",
-                  "value": "10",
+                  "value": "11",
                   "type": "text"
                 }
               ]
@@ -782,7 +782,7 @@
                 }
               ]
             },
-            "url": "{{host}}/rpc/admin/comment-like-count",
+            "url": "{{host}}/rpc/admin/share-news-count",
             "description": "Returns specific notification id"
           },
           "response": []
