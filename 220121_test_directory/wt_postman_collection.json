@@ -729,7 +729,7 @@
           "response": []
         },
         {
-          "name": "comment-like-count Copy",
+          "name": "share-news-count",
           "id": "b7fa5d9c-0669-408a-86c1-748d9a7af40d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
