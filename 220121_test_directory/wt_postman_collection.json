@@ -738,14 +738,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{host}}/rpc/admin/comment-like-count?id=10005013",
+              "raw": "{{host}}/rpc/admin/share-news-count?id=10005013",
               "host": [
                 "{{host}}"
               ],
               "path": [
                 "rpc",
                 "admin",
-                "comment-like-count"
+                "share-news-count"
               ],
               "query": [
                 {
